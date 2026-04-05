@@ -18,10 +18,10 @@ const baseURL: string = "https://renatonara.com.br";
 
 const routes: RoutesConfig = {
   "/": true,
-  "/about": true,
+  "/about": false,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/blog": false,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
@@ -192,7 +192,11 @@ const schema: SchemaConfig = {
 };
 
 // social links
-const sameAs: SameAsConfig = {};
+const sameAs: SameAsConfig = {
+  threads: "",
+  linkedin: "",
+  discord: "",
+};
 
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {

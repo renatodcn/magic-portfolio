@@ -6,10 +6,10 @@ const person: Person = {
   lastName: "Nara",
   name: `Renato Nara`,
   role: "Desenvolvedor Web",
-  avatar: "/images/avatar.jpg",
+  avatar: "",
   email: "contato@renatonara.com.br",
-  location: "America/Sao_Paulo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Português"], // optional: Leave the array empty if you don't want to display languages
+  location: "America/Sao_Paulo",
+  languages: ["Português"],
 };
 
 const newsletter: Newsletter = {

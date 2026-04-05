@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
@@ -24,8 +24,8 @@ export default function Work() {
         image={`/api/og/generate?title=${encodeURIComponent(work.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          url: baseURL,
+          image: "",
         }}
       />
       <Heading marginBottom="l" variant="heading-strong-xl" align="center">

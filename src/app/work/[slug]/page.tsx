@@ -4,18 +4,15 @@ import {
   Meta,
   Schema,
   AvatarGroup,
-  Button,
   Column,
-  Flex,
   Heading,
   Media,
   Text,
   SmartLink,
   Row,
-  Avatar,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
@@ -88,13 +85,13 @@ export default async function Project({
         }
         author={{
           name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
+          url: baseURL,
+          image: "",
         }}
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">Projetos</Text>
         </SmartLink>
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
@@ -127,7 +124,7 @@ export default async function Project({
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
+          Projetos relacionados
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>
